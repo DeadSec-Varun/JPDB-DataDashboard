@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Employee Form using JPDB</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+        <!-- DataTables -->
+        <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+        <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+        <!-- jQuery -->
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <!-- Bootstrap 4 -->
+        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- DataTables  & Plugins -->
+        <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+        <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+        <script src="plugins/jszip/jszip.min.js"></script>
+        <script src="plugins/pdfmake/pdfmake.min.js"></script>
+        <script src="plugins/pdfmake/vfs_fonts.js"></script>
+        <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+        <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+        <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/adminlte.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="dist/js/demo.js"></script>
+        <!-- Theme style -->
+        <link rel="stylesheet" href="dist/css/adminlte.min.css">
+        <script>hdPageId = "form";</script>
+        <script>
+            myStatus = "in";
+        </script>    
+        <script type="text/javascript" src="http://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+
+        <script type="text/javascript" src='resources/js/common-js.js'></script>
+        <script type="text/javascript" src='resources/js/form.js'></script>
+
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            var myStatus = "in";
+            var myName = "form";
+        </script>
+        <!--    <script>checkSession()</script>   -->
+    </head>
+
+    <body class='hold-transition sidebar-mini' onload='listHighlight(hdPageId); onLoadFormData()'>
+         <div class='wrapper'>
+            <div id='hrNavBar'> </div>
+            <script>loadNavbar();</script>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1>Form View</h1>
+                            </div>
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active">FormView</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div><!-- /.container-fluid -->
+                </section>
+
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">   
+                                <div class="card">
+                                    <div class="card-body">
+                                <div class='container'> 
+                                    <form id='empform' method="get">
+                                        <div id="form-js">                                    
+                                        </div>
+
+                                        <div class="form-group text-center">
+                                            <button type="button" class="btn btn-lg btn-primary" id="new" onclick="newData()">New</button>
+                                            <button type="button" class="btn btn-lg btn-primary" id="save" onclick="saveData()" disabled>Save</button>
+                                            <button type="button" class="btn btn-lg btn-primary" id="edit" onclick="editData()" >Edit</button>
+                                            <button type="button" class="btn btn-lg btn-primary" id="change" onclick="changeData()" disabled>Change</button>
+                                            <button type="button" class="btn btn-lg btn-primary" id="reset" onclick="resetData()" disabled>Reset</button>
+                                        </div>      
+                                        <div class="form-group text-center">
+                                            <button type="button" class="btn btn-lg btn-primary" id="first" onclick="getFirst()">First</button>
+                                            <button type="button" class="btn btn-lg btn-primary" id="prev" onclick="getPrev()" disabled>Previous</button>
+                                            <button type="button" class="btn btn-lg btn-primary" id="next" onclick="getNext()" disabled>Next</button>
+                                            <button type="button" class="btn btn-lg btn-primary" id="last" onclick="getLast()">Last</button>
+                                        </div>                  
+                                    </form>
+                                </div>
+
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                            </div></div>     
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <div id='hrFooter'> </div>
+        </div>
+        <script>loadFooter(); loadConn()</script>
+
+    </body>
+</html>
