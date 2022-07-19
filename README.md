@@ -35,6 +35,4 @@ LinkedIn - www.linkedin.com/in/varun-negi-9656691aa
 
 ## Sample Videos
 
-<video controls>
-   <source src="sample-vid/Project-jpdb DD" type="video/mp4"/>
-</video>   
+https://user-images.githubusercontent.com/75602683/179738070-c7d53611-df44-4c5b-a370-28e9f3793a16.mp4
