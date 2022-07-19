@@ -25,3 +25,11 @@ I am familiar with Java, Kotlin, C++ and ML/AI with with internships and project
 
 ## Important Links
 LinkedIn - www.linkedin.com/in/varun-negi-9656691aa
+
+## Sample Images
+
+<img src="Sample-img/dataTable.png" width="500">
+<img src="Sample-img/lockscreen.png" width="500">
+<img src="Sample-img/UpdateForm.png" width="500">
+<img src="Sample-img/NewForm.png" width="500">
+
