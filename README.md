@@ -24,7 +24,15 @@ I am familiar with Java, Kotlin, C++ and ML/AI with with internships and project
 
 
 ## Important Links
+
+Home page: https://login2explore.com
+
+Register to use JsonPowerDB: http://api.login2explore.com
+
+JsonPowerDB Help: https://login2explore.com/jpdb/docs.html
+
 LinkedIn - www.linkedin.com/in/varun-negi-9656691aa
+
 
 ## Sample Images
 
